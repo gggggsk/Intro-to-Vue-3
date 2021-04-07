@@ -13,17 +13,24 @@
       <div class="nav-bar"></div>
 
       <div class="cart">Cart({{ cart }})</div>
-      <product-display :premium="premium"></product-display>
+      <product-display></product-display>
+      <product-display></product-display>
+      <product-display></product-display>
+
+    
+            
+            <button class="button" :class="{ disabledButton: !inStock }" :disabled="!inStock" v-on:click="addToCart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Import App -->
     <script src="./main.js"></script>
 
-    <!-- Import Components -->
+    <!-- Import App -->
     <script src="./components/ProductDisplay.js"></script>
-    <!-- solution -->
-    <script src="./components/ProductDetails.js"></script>
-    <!-- solution -->
+
 
     <!-- Mount App -->
     <script>
